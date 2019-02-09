@@ -12,15 +12,25 @@ export class AppComponent {
   ngOnInit() {
     this.router.events.subscribe((evt) => {
       if (evt instanceof NavigationEnd) {
-        if (window.outerWidth <= 992) {
-          $([document.documentElement, document.body]).animate({
-            scrollTop: $('#top-offset-scroll').offset().top
-          }, 0);
-        }
-        else {
+        this.ocultarNav();
+        if (window.outerWidth <= 992 && this.router.url != '/')
+          this.scrollearTitulo();
+        else
           window.scrollTo(0, 0);
-        }
       }
     });
+  }
+
+  ocultarNav() {
+    if ($('#navbarNavDropdown').css('display') != 'none' &&
+      $('.navbar-toggler').css('display') != 'none') {
+      $('.navbar-toggler').trigger("click");
+    }
+  }
+
+  scrollearTitulo() {
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $('#top-offset-scroll').offset().top
+    }, 0);
   }
 }
