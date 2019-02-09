@@ -1,0 +1,62 @@
+<div class="turno">
+  <div class="inner">
+    <div class="row">
+      <div class="col-md-4 offset-md-4">
+        <h1>Pedir Turno</h1>
+      </div>
+      <div class="col-md-4 texto" >
+        <p>Puede pedir turno para peluquería o especialidades. Los turnos se confirman por correo electrónico en un plazo de 48 horas.</p>
+      </div>
+    </div>
+    <div class="row">
+      <form [formGroup]="turnoForm" class="col-md-8 offset-md-4" (ngSubmit)="onSubmit()">
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label>Fecha deseada</label>
+            <div class="input-group">
+              <input matInput [matDatepicker]="picker" class="form-control" placeholder="Fecha" formControlName="fecha" >
+              <div class="input-group-append">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker color="primary" touchUi #picker></mat-datepicker>
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-md-4">
+            <label>Nombre</label>
+            <input formControlName="nombre" type="text" class="form-control" placeholder="Nombre" [ngClass]="{ 'is-invalid': submitted && formData.nombre.errors }">
+            <div *ngIf="submitted && formData.nombre.errors" class="invalid-feedback">
+              <div *ngIf="formData.nombre.errors.required">El Nombre es requerido</div>
+            </div>
+          </div>
+          <div class="form-group col-md-4">
+            <label>Mascota</label>
+            <input formControlName="mascota" type="text" class="form-control" placeholder="Nombre de mascota">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-8">
+            <div class="form-group">
+            <label>Mensaje o consulta</label>
+            <textarea formControlName="mensaje" class="form-control" placeholder="Escriba un mensaje..."></textarea>
+              </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label>Email</label>
+              <input formControlName="email" type="text" class="form-control" placeholder="Email" [ngClass]="{ 'is-invalid': submitted && formData.email.errors }">
+              <div *ngIf="submitted && formData.email.errors" class="invalid-feedback">
+                <div *ngIf="formData.email.errors.required">El Email es requerido</div>
+                <div *ngIf="formData.email.errors.email">No es un email válido</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary form-control">Enviar</button>
+            </div>
+          </div>
+          </div>
+       
+      </form>
+    </div>
+  </div>
+</div>

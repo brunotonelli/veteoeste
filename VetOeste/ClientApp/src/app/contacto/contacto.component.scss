@@ -1,0 +1,21 @@
+@import 'colores';
+
+.form-contacto {
+  width: 100%;
+  margin-top: 20px;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+  border: solid 2px $primary-color;
+  background-color: #ffe9c8;
+}
+
+@media only screen and (max-width: 466px) {
+  .form-contacto {
+    padding: 0;
+    border-radius: 0;
+    box-shadow: unset;
+    border: none;
+    background-color: inherit;
+  }
+}

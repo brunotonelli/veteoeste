@@ -1,0 +1,68 @@
+<div class="container-fluid">
+  <div class="header row">
+    <div class="col-md-4">
+      <div id="horarios">
+        De LUNES a SÁBADO
+        <br />Abierto de 9 a 12.30 hs y 16 a 20 hs
+        <div class="divider"></div>
+        Feriados de 9 a 12.30 hs
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="logos">
+        <img id="logo" src="assets/shared/logo.png" />
+        <img id="logo-md" src="assets/shared/logo-md.png" />
+        <img id="logo-sm" src="assets/shared/logo-sm.png" />
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="container-fluid">
+        <div class="row">
+          <div id="direccion" class="col-sm-9">
+            <span>
+              <i class="fa fa-home"></i> Maldonado 253 - Ciudadela
+              <br />
+              <i class="fa fa-phone"></i> (011) 4647-2947
+            </span>
+            <a href="https://goo.gl/QgU1Us"><img id="mapa-xs" src="assets/shared/maps.png" /></a>
+          </div>
+          <a class="col-sm-3" href="https://goo.gl/QgU1Us"><img id="mapa" src="assets/shared/maps.png" /></a>
+        </div>
+        <div class="row">
+          <div id="botones" class="btn-group btn-group-justified">
+            <a (click)="scrollTurno()" class="btn btn-header">TURNOS <img src="assets/shared/turno.png" /></a>
+            <a (click)="openDatos(content)" class="btn btn-header">EMAIL <img src="assets/shared/email.png" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h2 class="modal-title" id="modal-basic-title">Datos de contacto</h2>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-sm-6">
+        <h3>Emails</h3>
+        <b>#1: </b>veteoeste@gmail.com<br />
+        <b>#2: </b>cecistanchi@hotmail.com<br />
+      </div>
+      <div class="col-sm-6">
+        <h3>Teléfonos</h3>
+        <b>#1: </b>011 4647-2947<br />
+      </div>
+    </div>
+    <hr />
+    <h3>Redes</h3>
+    <b>Facebook: </b><a href="https://www.facebook.com/Clínica-Veterinaria-del-Oeste-392148511363649">Clínica Veterinaria del Oeste</a><br />
+    <b>Instagram: </b><a href="https://www.instagram.com/veteoeste/">veteoeste</a><br />
+  </div>
+  <div class="modal-footer">
+  </div>
+</ng-template>

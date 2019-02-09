@@ -1,0 +1,166 @@
+@import 'colores';
+@import 'variables';
+
+@font-face {
+  font-family: 'Lemon/Milk';
+  src: url('assets/fonts/LemonMilk.eot'); /* IE9 Compat Modes */
+  src: url('assets/fonts/LemonMilk.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('assets/fonts/LemonMilk.woff2') format('woff2'), /* Super Modern Browsers */
+  url('assets/fonts/LemonMilk.woff') format('woff'), /* Pretty Modern Browsers */
+  url('assets/fonts/LemonMilk.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('assets/fonts/LemonMilk.svg') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Tourmaline';
+  src: url('assets/fonts/Tourmaline-Bold.eot'); /* IE9 Compat Modes */
+  src: url('assets/fonts/Tourmaline-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('assets/fonts/Tourmaline-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+  url('assets/fonts/Tourmaline-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+  url('assets/fonts/Tourmaline-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('assets/fonts/Tourmaline-Bold.svg') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Slowly Two';
+  src: url('assets/fonts/SlowlyTwo.eot'); /* IE9 Compat Modes */
+  src: url('assets/fonts/SlowlyTwo.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('assets/fonts/SlowlyTwo.woff2') format('woff2'), /* Super Modern Browsers */
+  url('assets/fonts/SlowlyTwo.woff') format('woff'), /* Pretty Modern Browsers */
+  url('assets/fonts/SlowlyTwo.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('assets/fonts/SlowlyTwo.svg') format('svg'); /* Legacy iOS */
+}
+
+body {
+  background: url('assets/home/bg-home.png');
+  background-color: #fbdbac;
+}
+
+.cuerpo {
+  margin-left: -15px;
+  margin-right: -15px;
+  background-color: #fbdbac;
+  padding: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-family: Calibri;
+  font-size: 18px;
+  color: black;
+
+  .divider {
+    background-color: $primary-color;
+    height: 3px;
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Lemon/Milk';
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  h1 {
+    color: $primary-color;
+    font-size: 36px;
+  }
+
+  h2 {
+    color: #7c4d23;
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+    color: black;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    padding-left: 1em;
+    text-indent: -.7em;
+  }
+
+  li::before {
+    content: "•";
+    padding-right: 7px;
+    color: red;
+  }
+
+  img {
+    border-radius: 25px;
+    border: solid 3px #7c4d23;
+    width: 100%;
+  }
+}
+
+.banda {
+  margin: 50px -50px 50px -50px;
+  padding: 0;
+  background-color: #e4c394;
+  text-align: center;
+  vertical-align: middle;
+
+  img {
+    border-radius: 0;
+    border: none;
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  span {
+    color: $primary-color;
+    font-size: 22px;
+    font-style: italic;
+  }
+}
+
+.seccion {
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: $sm-width) {
+
+  .cuerpo {
+    padding: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 14px;
+
+    img {
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+
+  .banda {
+    margin-left: -20px;
+    margin-right: -20px;
+    }
+
+    h1 {
+      font-size: 28px;
+    }
+
+    h2 {
+      font-size: 17px;
+    }
+
+    h3 {
+      font-size: 14px;
+    }
+  }
+  }
+
+.borderless {
+  border: none !important;
+}

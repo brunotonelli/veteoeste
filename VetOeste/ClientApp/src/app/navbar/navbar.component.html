@@ -1,0 +1,80 @@
+<div id="top-offset-scroll"></div>
+<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="fa fa-paw"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">INICIO</a>
+      </li>
+      <li class="nav-item dropdown" routerLinkActive="active">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+          SERVICIOS
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" routerLink="/cryovet" routerLinkActive="active">
+            Cryo Vet
+          </a>
+          <a class="dropdown-item" routerLink="/cirugia" routerLinkActive="active">
+            Cirugía
+          </a>
+          <a class="dropdown-item" routerLink="/especialidades" routerLinkActive="active">
+            Especialidades
+          </a>
+          <a class="dropdown-item" routerLink="/exoticos" routerLinkActive="active">
+            Exóticos
+          </a>
+          <a class="dropdown-item" routerLink="/complementarios" routerLinkActive="active">
+            Complementarios
+          </a>
+          <a class="dropdown-item" routerLink="/oncologia" routerLinkActive="active">
+            Oncología
+          </a>
+          <a class="dropdown-item" routerLink="/odontologia" routerLinkActive="active">
+            Odontología
+          </a>
+          <a class="dropdown-item" routerLink="/peluqueria" routerLinkActive="active">
+            Peluqueria
+          </a>
+        </div>
+      </li>
+      <li class="nav-item dropdown" routerLinkActive="active">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          SOBRE
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" routerLink="/historia" routerLinkActive="active">
+            Historia
+          </a>
+          <a class="dropdown-item" routerLink="/ubicacion" routerLinkActive="active">
+            Ubicación
+          </a>
+          <a class="dropdown-item" routerLink="/veterinarios" routerLinkActive="active">
+            Veterinarios
+          </a>
+        </div>
+      </li>
+      <li class="nav-item dropdown" routerLinkActive="active">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          RECURSOS
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" routerLink="/articulos" routerLinkActive="active">
+            Artículos
+          </a>
+          <a class="dropdown-item" routerLink="/infografias" routerLinkActive="active">
+            Infografías
+          </a>
+          <a class="dropdown-item" routerLink="/formularios" routerLinkActive="active">
+            Formularios
+          </a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contacto" routerLinkActive="active">CONTACTO</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>

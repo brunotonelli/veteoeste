@@ -1,0 +1,58 @@
+<titulo titulo="Contacto" imagen="contacto"></titulo>
+
+<div class="cuerpo">
+
+  <div class="seccion row">
+    <div class="col-lg-12">
+      <h1>Contacte a nuestra clinica hoy!</h1>
+      <p>Complete el formulario a continuación para comunicarse con Clínica Veterinaria del Oeste. Si tiene un asunto más urgente, llámenos al 4647-2947 o envíenos un correo electrónico a <a href="#"> veteoeste@gmail.com </a>. Tenga en cuenta que enviarnos un correo electrónico puede tardar hasta 24 horas para recibir una respuesta.</p>
+
+
+      <form class="form-contacto" (ngSubmit)="onSubmit()" [formGroup]="contactoForm">
+        <div class="form-row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label>Nombre *</label>
+              <input formControlName="nombre" type="text" class="form-control" placeholder="Ingresar nombre" [ngClass]="{ 'is-invalid': submitted && formData.nombre.errors }">
+              <div *ngIf="submitted && formData.nombre.errors" class="invalid-feedback">
+                <div *ngIf="formData.nombre.errors.required">El Nombre es requerido</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <label>Nombre de su mascota</label>
+            <input formControlName="mascota" type="text" class="form-control" placeholder="Ingresar nombre de mascota">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label>Email *</label>
+              <input formControlName="email" type="text" class="form-control" placeholder="Ingresar email" [ngClass]="{ 'is-invalid': submitted && formData.email.errors }">
+              <div *ngIf="submitted && formData.email.errors" class="invalid-feedback">
+                <div *ngIf="formData.email.errors.required">El Email es requerido</div>
+                <div *ngIf="formData.email.errors.email">No es un email válido</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label>Teléfono</label>
+              <input formControlName="telefono" type="text" class="form-control" placeholder="Ingresar teléfono">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Preguntas o comentarios *</label>
+          <textarea formControlName="consulta" class="form-control" rows="3" [ngClass]="{ 'is-invalid': submitted && formData.consulta.errors }"></textarea>
+          <div *ngIf="submitted && formData.consulta.errors" class="invalid-feedback">
+            <div *ngIf="formData.email.errors.required">El Mensaje es requerido</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="form-control btn btn-primary">Enviar mensaje</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>

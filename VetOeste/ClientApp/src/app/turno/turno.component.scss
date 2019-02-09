@@ -1,0 +1,68 @@
+@import 'colores';
+@import 'variables';
+
+mat-datepicker-toggle {
+  color: white;
+}
+
+.turno {
+  color: white;
+  border-radius: 10px;
+  background: -webkit-linear-gradient(-45deg, $primary-color 0%, #b47034 100%);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+  border: 2px solid #371404;
+  padding: 25px;
+  min-height: 420px;
+  width: 100%;
+
+  .inner {
+    background: $primary-color url('../../assets/shared/turno-imagen.png') no-repeat;
+    min-height: 370px;
+    padding: 10px;
+
+    p {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 112px;
+      font-family: 'Slowly Two';
+      color: white;
+    }
+
+    form {
+      textarea {
+        resize: none;
+        height: 100%;
+      }
+    }
+
+    .texto {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column; /* column | row */
+    }
+  }
+}
+
+@media only screen and (max-width: $sm-width) {
+  .turno {
+    border-radius: 0;
+    }
+  }
+
+    @media only screen and (max-width: $xs-width) {
+      .turno {
+        padding: 10px;
+
+        .inner {
+          background: $primary-color;
+
+          h1 {
+            text-align: center;
+            font-size: 48px;
+          }
+        }
+      }
+    }
